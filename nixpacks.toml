@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["nodejs-22_x"]
+
+nixPkgs = ["nodejs_22"]
 
 [phases.install]
-# Usa npm install em vez de npm ci (mais tolerante com lock files)
 cmds = ["npm install --legacy-peer-deps"]
 
 [phases.build]
