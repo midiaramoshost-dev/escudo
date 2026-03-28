@@ -8,5 +8,4 @@ cmds = ["npm install --legacy-peer-deps"]
 cmds = ["npm run build"]
 
 [start]
-# Mude para este comando que mantém o Nginx rodando:
-cmd = "nginx -g 'daemon off;'"
+cmd = "npx serve -s dist -l 80"
