@@ -1,0 +1,12 @@
+[phases.setup]
+nixPkgs = ["nodejs-22_x"]
+
+[phases.install]
+# Usa npm install em vez de npm ci (mais tolerante com lock files)
+cmds = ["npm install --legacy-peer-deps"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "echo 'static site built with vite'"
