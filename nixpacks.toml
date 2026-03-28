@@ -1,5 +1,4 @@
 [phases.setup]
-
 nixPkgs = ["nodejs"]
 
 [phases.install]
@@ -9,4 +8,5 @@ cmds = ["npm install --legacy-peer-deps"]
 cmds = ["npm run build"]
 
 [start]
-cmd = "echo 'static site built with vite'"
+# Mude para este comando que mantém o Nginx rodando:
+cmd = "nginx -g 'daemon off;'"
